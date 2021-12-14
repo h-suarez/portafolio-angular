@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+// MODULO PARA EL SERVICIO
+import { HttpClientModule } from '@angular/common/http'
+
 // COMPONENTES
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -22,7 +25,10 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [ // En los imports se veen los modulos
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // Este HttpClientModule nos va a permitir poder realizar peticiones
+    // get,put,delete,post,etc a servidores REST
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
