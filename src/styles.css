@@ -1,4 +1,6 @@
 /* Aqui se colocan los estilos globales */
+
+/* Animaciones */
 .animate__animated {
   -webkit-animation-duration: 0.7s;
   animation-duration: 0.7s;
@@ -45,4 +47,11 @@ print {
 .animate__fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn
+}
+
+/* SVG Animation - Reload de la pagina de portafolio */
+
+svg path,
+svg rect{
+  fill: black;
 }
