@@ -10,6 +10,7 @@ import { Routes, RouterModule } from '@angular/router'; // Con el RouterModule l
 import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ItemComponent } from './pages/item/item.component';
+import { SearchComponent } from './pages/search/search.component';
 
 // Especificamos las rutas de mi aplicación
 // Creamos constantes de tipo Routes, y esto va ha hacer igual a un arreglo
@@ -22,7 +23,8 @@ const app_routes:Routes = [
     //{ path:'/', component:PortafolioComponent}, // Cuando mi ruta sea vacia, osea asi => http://localhost:4200, va a redirigir al componente PortafolioComponent
     { path:'home', component:PortafolioComponent},
     { path:'about', component:AboutComponent},
-    { path:'item', component:ItemComponent},
+    { path:'item/:id', component:ItemComponent},
+    { path:'search/:termino', component:SearchComponent},
     // pathMatch: 'full' => Lee todo el path, y nos redirecciona al PortafolioComponent
     { path:'**', pathMatch: 'full', redirectTo:'home'}, // Definimos otra ruta que sea la exepción, en caso las otras rutas no navegan a ninguna parte, lo redireccionamos a cualquiera de esos paths disponibles
 ];

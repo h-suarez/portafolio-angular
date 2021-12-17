@@ -27,14 +27,20 @@
             <a routerLink="about" class="rk-menu__link">About</a>
           </li>
         </ul>
-        <form class="rk-search">
-          <input type="text" placeholder="Search" id="urku-search" class="rk-search-field">
+        <div class="rk-search">
+          <!-- Cuando alguien escriba quiero escuchar el evento (keyup.enter)
+          (keyup.enter) => Cuando alguien presione y suelte la tecla, va a
+                           ejecutar un evento buscarProducto() -->
+          <!-- Puedo hacer una referencia local a una caja de texto creando una 
+          variable local #txtBuscar -->
+          <input type="text" (keyup.enter)="buscarProducto(txtBuscar.value)"
+          placeholder="Buscar..." id="urku-search" class="rk-search-field" #txtBuscar>
           <label for="urku-search">
             <svg>
               <use xlink:href="assets/img/symbols.svg#icon-search"></use>
             </svg>
           </label>
-        </form>
+        </div>
       </nav>
     </div>
   </header>
